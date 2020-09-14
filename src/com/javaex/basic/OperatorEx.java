@@ -4,6 +4,47 @@ public class OperatorEx {
 
 	public static void main(String[] args) {
 		arithOperEx();
+		logicalOperEx();
+	}
+	
+	public static void conditionalOperEx() {
+		// 3항 연산자
+		int a = 10;
+		
+		// a가 짝수인지 여부를 확인
+		System.out.println(a % 2 == 0? "짝수" : "홀수");
+		
+		int score = 85;
+		// 80이상이면 Good, 50점 이상이면 Pass, 그렇지 않으면 Fail
+		String Message;
+		Message = score >= 80? "Good" : score >= 50 ? "Pass" : "Fail";
+		System.out.println("점수:" + score + ", 결과:" + Message);
+	}
+	
+	public static void logicalOperEx() {
+			// 논리곱( and &&), 논리합( or ||), 논리부정(not !)
+		
+		int n = 5;
+		
+		boolean r1 = n > 0;
+		boolean r2 = n < 10;
+		
+		boolean r1Andr2 = r1 && r2;
+		System.out.println("r1andr2?" + r1Andr2);
+		
+		// II. n은 0이하이거나 n은 10 이상인가?
+		//		조건 1: n <= 0
+		//		조건 2: n >= 10
+		//		결과: 조건1 or 조건2
+		r1 = n <= 0;
+		r2 = n >= 10;
+		boolean r1Orr2 = r1 || r2; // n <= 0 || n >= 10
+		System.out.println("r1 or r2 ?" + r1Orr2);
+		
+		/// III. II 조건의 부정
+		boolean notII = !r1Orr2;
+		//     -> I의 구역과 일치
+		System.out.println("not II ?" + notII);
 	}
 	
 	public static void arithOperEx() {

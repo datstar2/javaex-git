@@ -9,6 +9,39 @@ public class LoopEx {
 		dowhileEx();
 		forEx();
 		continueEx();
+		breakEx();
+		randomEx();
+	}
+	
+	public static void randomEx() {
+		System.out.println(Math.random());  //  0.0이상 1.0미만의 실수값
+		//  정수 난수의 공식 : (int)Math.random() * 최대값 + 최솟값
+		
+		// 1 ~ 45 사이의 임의의 숫자를 6개 추출해 봅시다.
+		for (int i = 1; i <= 6 ; i ++) {
+			System.out.print((int)(Math.random()) + 1);
+			System.out.print( " ");
+		}
+		System.out.println();
+		
+		// 위의 코든 ㄴ중복 발생 가능
+		
+		// 중복을 허용하지 않은 6개의 난수를 뽑아보기((연습문제))
+	}
+	
+	public static void breakEx() {
+		// 루프 도중, break 문을 만나면
+		// 해당 루프문을 종료하고 탈출
+		
+		// 1부터 증가시키면서 6과 14로 모두 나누어 떨어지는 수를 구하자
+		int num = 1;
+		
+		while(true) {  //무한루프
+			if (num % 6 == 0 && num % 14 == 0) break;
+			num ++;
+		}
+		
+		System.out.println(num);
 	}
 	
 	
@@ -73,6 +106,8 @@ public class LoopEx {
 		for (int num = 1; num <= 9; num++) {
 			System.out.println(dan + " * " + num + " = " + dan * num);
 		}
+		
+		scanner.close();
 	}
 	
 	public static void dowhileEx() {
