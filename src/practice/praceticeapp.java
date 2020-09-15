@@ -63,6 +63,14 @@ public class praceticeapp {
 			}
 		}
 	}
+	
+	public static void Problem05 () {
+		System.out.println("숫자를 입력하세요");
+		int num[] = int [5];
+		
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+	}
 }
 
 
