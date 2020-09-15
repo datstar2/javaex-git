@@ -38,7 +38,7 @@ public class Point {
 		// 메서드 오버로딩
 		String message = String.format("점[x=%d, y=%d]을", x, y);
 		
-		StringbDraw ? message += "그렸습니다.":message += "지웠습니다.";
+		message += bDraw ? "그렸습니다.":"지웠습니다.";
 				
 		System.out.println(message);
 	}
