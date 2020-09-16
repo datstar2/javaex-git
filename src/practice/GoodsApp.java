@@ -16,11 +16,9 @@ public class GoodsApp {
 		
 		
 		Goods shoes = new Goods("금강제화", 500000);
-		
 		shoes.showinfo();
 		
 		
-
 	}
 
 }
