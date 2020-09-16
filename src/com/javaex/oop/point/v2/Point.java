@@ -1,17 +1,18 @@
 package com.javaex.oop.point.v2;
 
-// v2. 생성자
+//	v2. 생성자
 public class Point {
-	// 필드
+	//	필드
 	private int x;
 	private int y;
-	
-	// 생성자
+
+	//	생성자
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
-	// Getter / Setter
+	
+	//	Getter / Setter
 	public int getX() {
 		return x;
 	}
@@ -28,10 +29,17 @@ public class Point {
 		this.y = y;
 	}
 	
-	//메서드
+	//	메서드
 	public void draw() {
-		System.out.printf("점[x=%d, y=%d]를 그렸습니다.", x, y);
+		System.out.printf("점[x=%d, y=%d]을 그렸습니다.%n", x, y);
 	}
-	
-
 }
+
+
+
+
+
+
+
+
+

@@ -1,18 +1,19 @@
 package com.javaex.oop.point.v3;
 
-// v3. 매서드 오버로딩
-//		같은이름, 같은 리턴 타입을 가지지만, 인수의 갯수, 순소서로 구별되는 메서드
+//	v3. 메서드 오버로딩
+//		같은 이름, 같은 리턴 타입을 가지지만, 인수의 갯수, 순서로 구별되는 메서드
 public class Point {
-	// 필드
+	//	필드
 	private int x;
 	private int y;
-	
-	// 생성자
+
+	//	생성자
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
-	// Getter / Setter
+	
+	//	Getter / Setter
 	public int getX() {
 		return x;
 	}
@@ -29,17 +30,31 @@ public class Point {
 		this.y = y;
 	}
 	
-	//메서드
+	//	메서드
 	public void draw() {
-		System.out.printf("점[x=%d, y=%d]를 그렸습니다.", x, y);
+		System.out.printf("점[x=%d, y=%d]을 그렸습니다.%n", x, y);
 	}
 	
 	public void draw(boolean bDraw) {
-		// 메서드 오버로딩
+		//	메서드 오버로딩
 		String message = String.format("점[x=%d, y=%d]을", x, y);
 		
-		message += bDraw ? "그렸습니다.":"지웠습니다.";
-				
+//		if (bDraw) { //	true
+//			message += "그렸습니다.";
+//		} else {
+//			message += "지웠습니다.";
+//		}
+		message += bDraw ? "그렸습니다.": "지웠습니다";
+		
 		System.out.println(message);
 	}
 }
+
+
+
+
+
+
+
+
+

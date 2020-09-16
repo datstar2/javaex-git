@@ -7,7 +7,7 @@ public class PointApp {
 		p1.draw();
 		p1.draw(true);
 		p1.draw(false);
-		
+
 		Point p2 = new Point(30, 40);
 		p2.draw();
 		p2.draw(true);

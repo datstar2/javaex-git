@@ -1,11 +1,12 @@
 package com.javaex.oop.point.v1;
 
+//	v1. 정보은닉 + Getter / Setter
 public class Point {
-	// 필드
+	//	필드
 	private int x;
 	private int y;
-	
-	// Getter / Setter
+
+	//	Getter / Setter
 	public int getX() {
 		return x;
 	}
@@ -22,10 +23,17 @@ public class Point {
 		this.y = y;
 	}
 	
-	//메서드
+	//	메서드
 	public void draw() {
-		System.out.printf("점[x=%d, y=%d]를 그렸습니다.", x, y);
+		System.out.printf("점[x=%d, y=%d]을 그렸습니다.%n", x, y);
 	}
-	
-
 }
+
+
+
+
+
+
+
+
+

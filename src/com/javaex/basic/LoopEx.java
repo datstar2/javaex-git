@@ -6,53 +6,33 @@ public class LoopEx {
 
 	public static void main(String[] args) {
 //		whileEx();
-//		dowhileEx();
+//		doWhileEx();
 //		forEx();
 //		continueEx();
 //		breakEx();
 		randomEx();
-//		guguFor();
-//		starsFor();
-//		guguWhile();
-//		starsWhile();
 	}
 	
 	public static void randomEx() {
-		System.out.println(Math.random());  //  0.0이상 1.0미만의 실수값
-		//  정수 난수의 공식 : (int)Math.random() * 최대값 + 최솟값
+		System.out.println(Math.random());	//	0.0이상 1.0미만의 실수값
+		//	정수 난수의 공식: (int)Math.random() * 최댓값 + 최솟값
 		
-		int a[] = new int[6];
-		// 1 ~ 45 사이의 임의의 숫자를 6개 추출해 봅시다.
-		for (int i = 0; i <= 5 ; i ++) {
-			int k = 0;
-			while ( k < i) {
-				a[i] = (int)((Math.random()*45+1));
-				if (a[i] == a[k]) {
-					continue;
-				}
-				else {
-					k = k+1;
-				}
-					
-			}
+		//	1 ~ 45사이의 임의의 숫자를 6개 추출해 봅시다
+		for (int i = 1; i <= 6; i++) {
+			System.out.print((int)(Math.random() * 45) + 1);
+			System.out.print(" ");
 		}
-		
-		for (int j =0 ; j <= 5 ; j++) {
-			System.out.print(a[j] + " ");
-		}
-		// 위의 코든 ㄴ중복 발생 가능
-		
-		// 중복을 허용하지 않은 6개의 난수를 뽑아보기((연습문제))
+		System.out.println();
 	}
 	
 	public static void breakEx() {
-		// 루프 도중, break 문을 만나면
-		// 해당 루프문을 종료하고 탈출
+		//	루프 도중, break문을 만나면
+		//	해당 루프문을 종료하고 탈출
 		
-		// 1부터 증가시키면서 6과 14로 모두 나누어 떨어지는 수를 구하자
+		//	1부터 증가시키면서 6과 14로 모두 나누어 떨어지는 수를 구하자
 		int num = 1;
 		
-		while(true) {  //무한루프
+		while(true) {	//	무한루프
 			if (num % 6 == 0 && num % 14 == 0) break;
 			num ++;
 		}
@@ -60,14 +40,11 @@ public class LoopEx {
 		System.out.println(num);
 	}
 	
-	
-	
-		
 	public static void continueEx() {
-		// 루프 도중, continue를 만나면
-		// 남은 코드를 실행하지 않고 다음번 루프를 수행
+		//	루프 도중, continue를 만나면
+		//	남은 코드를 실행하지 않고 다음번 루프를 수행
 		
-		// 1부터 100까지 루프를 돌면서 2의 배수, 3의 배수는 출력하지 않고 다음번 루프 수행
+		//	1부터 100까지 루프를 돌면서 2의 배수, 3의 배수는 출력하지 않고 다음번 루프 수행
 		for (int i = 1; i <= 100; i++) {
 			if (i % 2 == 0 || i % 3 == 0) continue;
 			
@@ -75,94 +52,42 @@ public class LoopEx {
 		}
 	}
 	
-	
-	public static void guguFor() { //연습문제(완료)
-		// 2단부터 9단까지의 구구표를 for문을 이용하여 출력
-		
-		for (int i = 2 ; i <= 9 ; i++) {
-			for ( int k = 1 ; k <= 9 ; k++) {
-				System.out.println(i + "*" + k + "=" + i*k);
-			}
-		}
+	public static void guguWhile() {
+		//	2단부터 9단까지의 구구표를 while문을 이용하여 출력
 	}
 	
-	
-	public static void starsFor() {//연습문제 완료
-		// 아래와 같이 루프를 돌며 출력 for문 이용
+	public static void starsWhile() {
+		//	아래와 같이 루프를 돌며 출력 while문 이용
 		/*
 		 
-		 * 
-		 ** 
+		 *
+		 **
 		 ***
 		 ****
 		 *****
 		 
 		 */
-		for(int dan = 1; dan <= 5 ; dan++) {
-			for( int k = 1; k <= dan ; k++) {
-				if (k == dan) {
-					System.out.println("*");
-				}
-				else {
-					System.out.print("*");
-				}
-			}
-		}
-		
 	}
 	
-	
-	public static void guguWhile() { //연습문제 완료
-		// 2단부터 9단까지의 구구표를 while문을 이요하여 출력
-		
-		int i = 2, k = 1;
-		
-		while (i <= 9) {
-			k = 1;
-			while ( k <= 9) {
-				System.out.println(i + "*" + k + "=" + i*k);
-				k = k + 1;
-				}
-			i = i + 1;
-		}
-		
-		
+	public static void guguFor() {
+		//	2단부터 9단까지의 구구표를 for문을 이용하여 출력
 	}
 	
-	public static void starsWhile() { //연습문제 완료
-		// 아래와 같이 루프를 돌며 출력 Whiler문 이용
+	public static void starsFor() {
+		//	아래와 같이 루프를 돌며 출력 for문 이용
 		/*
 		 
-		 * 
-		 ** 
+		 *
+		 **
 		 ***
 		 ****
 		 *****
 		 
 		 */
-		
-		int dan = 1;
-		int k = 1;
-		
-		while (dan <= 5) {
-			k = 1;
-			while (k <= dan) {
-				if (k == dan) {
-					System.out.println("*");
-				}
-				else {
-					System.out.print("*");
-				}
-				k = k +1;
-			}
-			dan = dan + 1;
-		}
-		
 	}
-	
 	
 	public static void forEx() {
-		// 단을 입력 받아서 해당 단의 구구표 출력
+		//	단을 입력 받아서 해당 단의 구구표 출력 
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("단을 입력하세요:");
 		
@@ -175,26 +100,26 @@ public class LoopEx {
 		scanner.close();
 	}
 	
-	public static void dowhileEx() {
+	public static void doWhileEx() {
+		//	while문은 조건 비교부터 -> 초기 조건 자체가 false면 단 한번도 실행되지 않음
+		int value = 0;
+		int total = 0;
 		
-		int total = 0, value = 0;
-		
-		
+		//	최소 1회는 실행하는 반복문 -> do ~ while
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("정수를 입력하세요[0이면 quit]:");
-		
 		
 		do {
+			System.out.print("정수를 입력하세요[0이면 quit]:");
 			value = scanner.nextInt();
 			total += value;
-		} while(value != 0);
+		} while(value != 0);	//	입력 값이 0이 아니면 반복
 		
 		System.out.println("합계:" + total);
 		scanner.close();
-		
 	}
 	
 	public static void whileEx() {
+		//	단을 입력 받아서 해당 단의 구구표 출력
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("단을 입력하세요:");
 		
